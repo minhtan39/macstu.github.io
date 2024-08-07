@@ -1,0 +1,187 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    background-color: white;
+    height: 80px; 
+}
+
+#header img {
+    height: 150px; /* Adjust height for the logo */
+    margin-right: 10px; /* Push the logo to the left */
+    border-radius: 20px;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1; /* Allow the nav to take remaining space */
+    justify-content: flex-end;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 15px; /* Adjust padding as needed */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgba(145, 12, 12, 1);
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    transition: left 0.4s ease; /* Smooth transition */
+}
+
+.sidebar.open {
+    left: 0; /* Move sidebar into view */
+}
+
+.sidebar li {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center list items horizontally */
+}
+
+.sidebar a {
+    width: 100%;
+    display: block; /* Ensure the links take full width of the list items */
+    padding: 15px 0; /* Add padding for better spacing */
+    text-align: center; /* Center text inside links */
+    color: black; /* Ensure text color is set */
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-button.open svg.bars {
+    display: none;
+}
+
+.menu-button.open svg.close {
+    display: block;
+}
+
+.menu-button svg.close {
+    display: none;
+}
+
+.image-header img {
+    height: 1500px; /* Maintain aspect ratio */
+    max-height: 1550px; /* Adjust to desired max height */
+    width: 996.985px;
+    max-width: 997px;
+    display: block;
+    margin: auto; /* Center the image */
+    margin-top: 50px;
+    
+}
+
+/*footer*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(145, 12, 12, 1);
+    color: #fff;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    border-bottom: 1px solid rgba(145, 12, 12, 1);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.footer-section .social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    .image-header img {
+        height: 600px; /* Maintain aspect ratio */
+        max-height: 900px; /* Adjust to desired max height */
+        width: 400px;
+        max-width: 450px;
+        display: block;
+        margin: auto; /* Center the image */
+    }
+}
+
+@media (max-width: 300px) {
+    .sidebar {
+        width: 100%;
+    }
+    
+}
+
