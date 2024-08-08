@@ -8,9 +8,11 @@
 /* Header styles */
 #header {
     display: flex;
+    position: fixed; /* Fix the header to the top of the page */
+    top: 0; /* Position it at the top */
+    width: 97%;
     align-items: center;
     padding: 0 20px; 
-    background-color: white;
     height: 80px; 
 }
 
@@ -22,7 +24,7 @@
 
 nav {
     display: flex;
-    flex-grow: 1; /* Allow the nav to take remaining space */
+    flex-grow: 1;
     justify-content: flex-end;
 }
 
@@ -63,8 +65,33 @@ nav a {
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
     transition: left 0.4s ease; /* Smooth transition */
-}
+    padding-top:20px,
 
+}
+/*Logo trong*/
+.sidebar-logo {
+    width: 150px;
+    margin-bottom: 20px; 
+    margin-top: -110px;
+}
+/* Line*/
+.line {
+    width: 19px;
+    height: 2px;
+}
+.line hr{
+    margin-left: -160px;
+    margin-top: 1px;
+}
+/*Line sidebar*/
+.line-all {
+    width: 145px;
+    height: 2px;
+}
+.line-all hr{
+    margin-left: -2px;
+    margin-top: -2px;
+}
 .sidebar.open {
     left: 0; /* Move sidebar into view */
 }
@@ -79,10 +106,25 @@ nav a {
     width: 100%;
     display: block; /* Ensure the links take full width of the list items */
     padding: 15px 0; /* Add padding for better spacing */
-    text-align: center; /* Center text inside links */
+    margin-right: -50px;
     color: black; /* Ensure text color is set */
+    font-size: auto;
+    font-size-adjust: none;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-variation-settings: normal;
+    font-weight: 400;
 }
-
+/*font hideonMobile*/
+.hideOnMobile a{
+    font-size: 15px;
+}
 .menu-button {
     display: none;
     cursor: pointer;
@@ -107,7 +149,8 @@ nav a {
     display: block;
     margin: auto; /* Center the image */
     margin-top: 50px;
-    
+    box-shadow: 0 0 0 #000;
+    position: static;
 }
 
 /*footer*/
@@ -167,7 +210,6 @@ body {
     .menu-button {
         display: block;
     }
-
 }
 
 @media (max-width: 300px) {
