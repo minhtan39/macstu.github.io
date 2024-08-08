@@ -101,10 +101,9 @@ nav a {
 }
 
 .image-header img {
-    height: 1500px; /* Maintain aspect ratio */
-    max-height: 1550px; /* Adjust to desired max height */
-    width: 996.985px;
-    max-width: 997px;
+    max-height: none;
+    max-width: 100%;
+    height:auto;
     display: block;
     margin: auto; /* Center the image */
     margin-top: 50px;
@@ -168,14 +167,7 @@ body {
     .menu-button {
         display: block;
     }
-    .image-header img {
-        height: 600px; /* Maintain aspect ratio */
-        max-height: 900px; /* Adjust to desired max height */
-        width: 400px;
-        max-width: 450px;
-        display: block;
-        margin: auto; /* Center the image */
-    }
+
 }
 
 @media (max-width: 300px) {
